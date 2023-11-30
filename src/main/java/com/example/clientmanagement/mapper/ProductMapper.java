@@ -10,4 +10,5 @@ public interface ProductMapper {
    static ProductMapper ProductMapper = Mappers.getMapper(ProductMapper.class);
 
     public  ProductDto productToDto(Product product);
+    public Product dtoToProduct(ProductDto productDto);
 }

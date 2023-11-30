@@ -37,15 +37,8 @@ public class CustomerService {
         customerRepository.deleteById(id);
     }
 
-    public Customer editCustomer(long id, Customer c) {
-
-        Customer customer = this.getCustomer(id);
-        customer.setEmail(c.getEmail());
-        customer.setFirst_name(c.getFirst_name());
-        customer.setLast_name(c.getLast_name());
-
-        customerRepository.save(customer);
-        return customer;
+    public void editCustomer(Customer customer) {
+          customerRepository.save(customer);
     }
 
 }
