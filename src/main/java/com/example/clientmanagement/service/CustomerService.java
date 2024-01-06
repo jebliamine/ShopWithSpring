@@ -3,10 +3,8 @@ package com.example.clientmanagement.service;
 
 import com.example.clientmanagement.exception.CustomerNotFoundException;
 import com.example.clientmanagement.model.Customer;
-
 import com.example.clientmanagement.repository.CustomerRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -40,5 +38,8 @@ public class CustomerService {
     public void editCustomer(Customer customer) {
           customerRepository.save(customer);
     }
+
+
+//    @PostConstruct
 
 }

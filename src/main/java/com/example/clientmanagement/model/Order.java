@@ -21,11 +21,14 @@ public class Order {
     private LocalDate Doo;
     @Transient
     private Double totalPrice;
+
     @ManyToOne
     @JoinColumn(name = "customer_id", referencedColumnName = "id")
     private Customer customer;
+
     @OneToMany(mappedBy = "order")
     private List<Product> products;
+
     @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
     private TrackingDetails trackingDetails;
 

@@ -1,7 +1,10 @@
 package com.example.clientmanagement.dto;
 
+import com.example.clientmanagement.model.ProductImage;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Builder
 public class ProductDto {
@@ -9,5 +12,6 @@ public class ProductDto {
     private Double price;
     private String name;
     private String info;
+    private List<ProductImage> productImages;
 
 }

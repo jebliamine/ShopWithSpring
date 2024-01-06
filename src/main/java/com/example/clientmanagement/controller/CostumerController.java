@@ -4,22 +4,17 @@ import com.example.clientmanagement.model.Customer;
 
 
 import com.example.clientmanagement.service.CustomerService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@AllArgsConstructor
 @RestController
-@RequestMapping(path = "api/v1/Customers")
+@RequestMapping(path = "Customer")
 public class CostumerController {
     private final CustomerService customerService;
-
-
-    @Autowired
-    public CostumerController(CustomerService customerService){
-        this.customerService = customerService;
-    }
 
     @GetMapping
     public List<Customer> getAllCostumer(){
